@@ -1,21 +1,28 @@
-# Python program to check if year is a leap year or not
+# Define the Player class
+class Player:
 
-year = 2000
+  def play(self):
+    print("The player is playing cricket")
 
-# To get year (integer input) from the user
-# year = int(input("Enter a year: "))
 
-# divided by 100 means century year (ending with 00)
-# century year divided by 400 is leap year
-if (year % 400 == 0) and (year % 100 == 0):
-    print("{0} is a leap year".format(year))
+# Define the Batsman class that inherits from Player
+class Batsman(Player):
 
-# not divided by 100 means not a century year
-# year divided by 4 is a leap year
-elif (year % 4 ==0) and (year % 100 != 0):
-    print("{0} is a leap year".format(year))
+  def play(self):
+    print("The batsman is batting")
 
-# if not divided by both 400 (century year) and 4 (not century year)
-# year is not leap year
-else:
-    print("{0} is not a leap year".format(year))
+
+# Define the Bowler class that inherits from Player
+class Bowler(Player):
+
+  def play(self):
+    print("The bowler is bowling")
+
+
+# Create objects of the Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
+
+# Call the play() method for each object
+batsman.play()
+bowler.play()
